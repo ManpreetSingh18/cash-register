@@ -1,5 +1,7 @@
 *{
     text-align: center;
+    background-color: #BF6A39;
+    color: white;
 }
 .container{
     display: flex;
