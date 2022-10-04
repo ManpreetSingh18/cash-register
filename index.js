@@ -12,7 +12,10 @@ checkButton.addEventListener("click",
 function validateBillandCashAmount(){
     message.style.display="none";
     if(billAmount.value >0){
-        if(cashGiven.value >= billAmount.value){
+        
+        if(Number(cashGiven.value) >= Number(billAmount.value)){
+            // console.log("Cash Given:"+cashGiven.value)
+            // console.log("Bill Amount:"+billAmount.value)
             const ammountToBeReturned=cashGiven.value-billAmount.value;
             calculateChange(ammountToBeReturned);
         }else{
@@ -33,7 +36,7 @@ function calculateChange(amountToBeReturned){
 }
 
 function showMessage(msg){
-    console.log("Here");
+    
     message.style.display="block";
     message.innerText= msg;
 }
